@@ -12,7 +12,7 @@ import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
 
 public class AnalyzerUtil {
 
-	public void displayToken(String string, Analyzer analyzer) {
+	public void displayToken(String string, Analyzer analyzer) {  
 		try {
 			TokenStream tokenStream = analyzer.tokenStream("description", new StringReader(string));
 			System.out.print(analyzer.getClass().toString().substring(analyzer.getClass().toString().lastIndexOf(".") + 1) + ": ");
