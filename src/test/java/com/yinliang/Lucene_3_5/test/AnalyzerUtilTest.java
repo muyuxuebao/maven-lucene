@@ -41,6 +41,9 @@ public class AnalyzerUtilTest {
 
 		String txt = "这是我的家, 我来自中国安徽省六安市苍墩村";
 
+
+		int aaa = 1000;
+		System.out.println(aaa);
 		for (Analyzer analyzer : analyzers) {
 			this.analyzerUtil.displayToken(txt, analyzer);
 		}
