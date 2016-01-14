@@ -3,6 +3,7 @@ package com.yinliang.Lucene_3_5.test;
 import static org.junit.Assert.fail;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.Filter;
@@ -15,6 +16,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.yinliang.Lucene_3_5.searcher.SearchUtil;
+
+import java.io.IOException;
 
 public class SearchUtilTest {
 	private SearchUtil filmSearchUtil = null;
@@ -121,6 +124,12 @@ public class SearchUtilTest {
 				Version.LUCENE_35)).parse("circus"));
 
 		this.filmSearchUtil.filterSearch("dentist forensic", filter3);
+	}
+
+
+	@Test
+	public void testFrequent() throws IOException {
+		filmSearchUtil.frequent();
 	}
 
 }
